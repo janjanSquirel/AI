@@ -5,7 +5,7 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 11:09:32 2015 sylvain garant
-** Last update Sat Jun 13 13:23:12 2015 sylvain garant
+** Last update Sat Jun 13 15:02:58 2015 clément borner
 */
 
 #ifndef MARCELINE_H_
@@ -39,5 +39,8 @@ void	my_putchar(char c);
 
 /* my_put_nbr.c */
 void	my_put_nbr(int nb);
+
+/* maths.c */
+void    coef_aplication(t_nod *nn);
 
 #endif
