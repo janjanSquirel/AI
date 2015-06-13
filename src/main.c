@@ -5,14 +5,22 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 10:33:33 2015 sylvain garant
-** Last update Sat Jun 13 11:11:43 2015 sylvain garant
+** Last update Sat Jun 13 12:08:26 2015 sylvain garant
 */
 
-#include <unistd.h>
 #include "../include/marceline.h"
+
+void	my_putstr(char *str)
+{
+  while (*str)
+    write(1, str++, 1);
+}
 
 int	main()
 {
-  write(1, "lold\n", 5);
+  t_nod	nn[64];
+
+  fill_pic(nn);
+  print_pic(nn);
   return (0);
 }
