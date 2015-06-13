@@ -1,16 +1,13 @@
 /*
-** main.c for main in /home/garant_s/AI
-**
-** Made by sylvain garant
-** Login   <garant_s@epitech.net>
-**
-** Started on  Sat Jun 13 10:33:33 2015 sylvain garant
-<<<<<<< HEAD
-** Last update Sat Jun 13 13:53:42 2015 clément borner
-=======
-** Last update Sat Jun 13 13:19:00 2015 sylvain garant
->>>>>>> 4dd0496a9c2362aa6ec4bf5494387c4b6544aceb
+** main.c for AI in /home/borner_c/Perso/AI/src
+** 
+** Made by clément borner
+** Login   <borner_c@epitech.net>
+** 
+** Started on  Sat Jun 13 15:07:13 2015 clément borner
+** Last update Sat Jun 13 15:11:35 2015 clément borner
 */
+
 
 #include <sys/types.h>
 #include <unistd.h>
@@ -25,11 +22,13 @@ void	my_putstr(char *str)
 
 int		main()
 {
-  t_nod		nn[64];
+  t_nod	input[64];
+  t_nod	output[10];
 
+  (void) output;
   srand(getpid() * time(0));
-  fill_pic(nn);
-  /* print_pic(nn); */
-  coef_aplication(nn);
+  fill_pic(input);
+  print_pic(input);
+  coef_aplication(input);
   return (0);
 }
