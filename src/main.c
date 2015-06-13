@@ -5,9 +5,12 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 10:33:33 2015 sylvain garant
-** Last update Sat Jun 13 12:08:26 2015 sylvain garant
+** Last update Sat Jun 13 13:26:11 2015 clément borner
 */
 
+#include <sys/types.h>
+#include <unistd.h>
+#include <time.h>
 #include "../include/marceline.h"
 
 void	my_putstr(char *str)
@@ -16,11 +19,13 @@ void	my_putstr(char *str)
     write(1, str++, 1);
 }
 
-int	main()
+int		main()
 {
-  t_nod	nn[64];
+  t_nod		nn[64];
 
+  srand(getpid() * time(0));
   fill_pic(nn);
   print_pic(nn);
+  coef_aplication(nn);
   return (0);
 }

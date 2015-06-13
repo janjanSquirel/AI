@@ -5,13 +5,14 @@
 ## Login   <borner_c@epitech.net>
 ## 
 ## Started on  Sat Jun 13 10:50:05 2015 clément borner
-## Last update Sat Jun 13 12:06:17 2015 sylvain garant
+## Last update Sat Jun 13 13:23:44 2015 clément borner
 ##
 
 NAME	= Luc
 
 SRC	= src/main.c \
-	src/picture.c
+	src/picture.c \
+	src/maths.c
 
 OBJ	= $(SRC:.c=.o)
 
