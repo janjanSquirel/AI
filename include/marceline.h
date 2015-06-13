@@ -5,7 +5,7 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 11:09:32 2015 sylvain garant
-** Last update Sat Jun 13 16:49:03 2015 sylvain garant
+** Last update Sat Jun 13 18:10:13 2015 sylvain garant
 */
 
 #ifndef MARCELINE_H_
@@ -20,20 +20,11 @@
 #define EMPTY "."
 #define FULL "#"
 
-typedef struct	s_lnk t_lnk;
 typedef struct	s_nod t_nod;
 
 struct		s_nod
 {
   double	data;
-  t_lnk		*link;
-};
-
-struct		s_lnk
-{
-  t_nod		*nod;
-  double	weight;
-  t_lnk		*next;
 };
 
 /* picture.c */

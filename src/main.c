@@ -5,7 +5,7 @@
 ** Login   <borner_c@epitech.net>
 ** 
 ** Started on  Sat Jun 13 15:07:13 2015 clément borner
-** Last update Sat Jun 13 17:08:07 2015 sylvain garant
+** Last update Sat Jun 13 18:10:46 2015 sylvain garant
 */
 
 #include "../include/marceline.h"
@@ -19,25 +19,35 @@ void	init_layer(t_nod layer[65])
     my_memset(&layer[i], 0, sizeof(t_nod));
 }
 
-int	add_link(t_lnk **stack, t_nod *nod)
-{
-  t_lnk	*elem;
-  t_lnk	*cpy;
+/* int	add_link(t_lnk **stack, t_nod *nod, double data) */
+/* { */
+/*   t_lnk	*elem; */
+/*   t_lnk	*cpy; */
 
-  if (!(elem = malloc(sizeof(*elem))))
-    return (-1);
-  my_memset(elem, 0, sizeof(*elem));
-  elem->nod = nod;
-  elem->weight = (double) rand();
-  while ((elem->weight /= 10) > 1);
-  if (!(cpy = *stack))
-    {
-      *stack = elem;
-      return (0);
-    }
-  while (cpy->next && (cpy = cpy->next));
-  cpy->next = elem;
-  return (0);
+/*   if (!(elem = malloc(sizeof(*elem)))) */
+/*     return (-1); */
+/*   my_memset(elem, 0, sizeof(*elem)); */
+/*   elem->nod = nod; */
+/*   elem->weight = (double) rand(); */
+/*   while ((elem->weight /= 10) > 1); */
+/*   nod->data += elem->weight * data; */
+/*   if (!(cpy = *stack)) */
+/*     { */
+/*       *stack = elem; */
+/*       return (0); */
+/*     } */
+/*   while (cpy->next && (cpy = cpy->next)); */
+/*   cpy->next = elem; */
+/*   return (0); */
+/* } */
+
+void		add_link(t_nod *nod, double data)
+{
+  double	weight;
+
+  weight = (double) rand();
+  while ((weight /= 10) > 1);
+  nod->data += weight * data;
 }
 
 int	vodka(t_nod input[64], t_nod layer[65])
@@ -51,9 +61,12 @@ int	vodka(t_nod input[64], t_nod layer[65])
       il = -1;
       input[iip].link = NULL;
       while (++il < 65)
-	if (add_link(&input[iip].link, &layer[il]))
+	if (add_link(&input[iip].link, &layer[il], input[iip].data))
 	  return (-1);
     }
+  il = -1;
+  while (++il < 65)
+    printf("%f\n", layer[il].data);
   return (0);
 }
 
@@ -66,7 +79,7 @@ int	main()
   srand(getpid() * time(0));
   init_layer(layer);
   fill_pic(input);
-  vodka(input, layer);
+  //vodka(input, layer);
   print_pic(input);
   coef_aplication(input);
   return (0);
