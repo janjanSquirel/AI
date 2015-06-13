@@ -5,7 +5,7 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 11:53:37 2015 sylvain garant
-** Last update Sat Jun 13 13:22:10 2015 sylvain garant
+** Last update Sat Jun 13 13:53:27 2015 clément borner
 */
 
 #include "../include/marceline.h"
@@ -87,6 +87,6 @@ void	print_pic(t_nod nn[64])
     {
       my_put_nbr(nn[i].data);
       if (!(i % 8))
-	write(1, "\n", 1);
+      	write(1, "\n", 1);
     }
 }
