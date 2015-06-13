@@ -5,7 +5,11 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 10:33:33 2015 sylvain garant
+<<<<<<< HEAD
 ** Last update Sat Jun 13 13:26:11 2015 clément borner
+=======
+** Last update Sat Jun 13 13:19:00 2015 sylvain garant
+>>>>>>> 4dd0496a9c2362aa6ec4bf5494387c4b6544aceb
 */
 
 #include <sys/types.h>
