@@ -5,7 +5,7 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 11:53:37 2015 sylvain garant
-** Last update Sat Jun 13 13:22:10 2015 sylvain garant
+** Last update Sat Jun 13 13:30:19 2015 sylvain garant
 */
 
 #include "../include/marceline.h"
@@ -22,50 +22,50 @@ void	fill_pic(t_nod nn[64])
   nn[7].data = 0;
   nn[8].data = 0;
   nn[9].data = 0;
-  nn[10].data = 1;
-  nn[11].data = 0;
+  nn[10].data = 0;
+  nn[11].data = 1;
   nn[12].data = 0;
   nn[13].data = 0;
   nn[14].data = 0;
   nn[15].data = 0;
   nn[16].data = 0;
   nn[17].data = 0;
-  nn[18].data = 1;
-  nn[19].data = 0;
+  nn[18].data = 0;
+  nn[19].data = 1;
   nn[20].data = 0;
   nn[21].data = 0;
   nn[22].data = 0;
   nn[23].data = 0;
   nn[24].data = 0;
   nn[25].data = 0;
-  nn[26].data = 1;
-  nn[27].data = 0;
-  nn[28].data = 1;
-  nn[29].data = 0;
+  nn[26].data = 0;
+  nn[27].data = 1;
+  nn[28].data = 0;
+  nn[29].data = 1;
   nn[30].data = 0;
   nn[31].data = 0;
   nn[32].data = 0;
   nn[33].data = 0;
-  nn[34].data = 1;
+  nn[34].data = 0;
   nn[35].data = 1;
   nn[36].data = 1;
   nn[37].data = 1;
-  nn[38].data = 0;
+  nn[38].data = 1;
   nn[39].data = 0;
   nn[40].data = 0;
   nn[41].data = 0;
   nn[42].data = 0;
   nn[43].data = 0;
-  nn[44].data = 1;
-  nn[45].data = 0;
+  nn[44].data = 0;
+  nn[45].data = 1;
   nn[46].data = 0;
   nn[47].data = 0;
   nn[48].data = 0;
   nn[49].data = 0;
   nn[50].data = 0;
   nn[51].data = 0;
-  nn[52].data = 1;
-  nn[53].data = 0;
+  nn[52].data = 0;
+  nn[53].data = 1;
   nn[54].data = 0;
   nn[55].data = 0;
   nn[56].data = 0;
@@ -85,7 +85,7 @@ void	print_pic(t_nod nn[64])
   i = 0;
   while (i++ < 64)
     {
-      my_put_nbr(nn[i].data);
+      nn[i].data ? write(1, FULL, 1) : write(1, EMPTY, 1);
       if (!(i % 8))
 	write(1, "\n", 1);
     }

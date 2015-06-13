@@ -5,7 +5,7 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 11:09:32 2015 sylvain garant
-** Last update Sat Jun 13 13:23:12 2015 sylvain garant
+** Last update Sat Jun 13 13:29:38 2015 sylvain garant
 */
 
 #ifndef MARCELINE_H_
@@ -14,6 +14,9 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+
+#define EMPTY "."
+#define FULL "#"
 
 typedef struct	s_lnt t_lnk;
 typedef struct	s_nod t_nod;

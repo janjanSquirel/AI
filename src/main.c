@@ -5,7 +5,7 @@
 ** Login   <garant_s@epitech.net>
 **
 ** Started on  Sat Jun 13 10:33:33 2015 sylvain garant
-** Last update Sat Jun 13 13:19:00 2015 sylvain garant
+** Last update Sat Jun 13 14:55:24 2015 sylvain garant
 */
 
 #include "../include/marceline.h"
@@ -18,9 +18,10 @@ void	my_putstr(char *str)
 
 int	main()
 {
-  t_nod	nn[64];
+  t_nod	input[64];
+  t_nod	output[10];
 
-  fill_pic(nn);
-  print_pic(nn);
+  fill_pic(input);
+  print_pic(input);
   return (0);
 }
