@@ -5,18 +5,20 @@
 ## Login   <borner_c@epitech.net>
 ## 
 ## Started on  Sat Jun 13 10:50:05 2015 clément borner
-## Last update Sat Jun 13 16:38:20 2015 sylvain garant
+## Last update Sun Jun 14 16:53:36 2015 sylvain garant
 ##
 
 NAME	= Luc
 
 SRC	= src/main.c \
 	src/picture.c \
-	src/maths.c \
 	src/my_putchar.c \
 	src/my_put_nbr.c \
 	src/my_memset.c \
-	src/my_putstr.c
+	src/my_putstr.c \
+	src/my_reallocat.c \
+	src/layer.c \
+	src/string_functions.c
 
 OBJ	= $(SRC:.c=.o)
 
@@ -27,7 +29,7 @@ CFLAGS	+= -W -Wall -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	cc -o $(NAME) $(OBJ)
+	cc -o $(NAME) $(OBJ) -lm
 
 clean:
 	$(RM) $(OBJ)
